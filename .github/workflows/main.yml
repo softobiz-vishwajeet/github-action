@@ -1,21 +1,21 @@
-name: deploy                                 
+name: deploy                                 #The name of the workflow is "Sample Workflow."
 
-on:                                               
+on:                                                #The workflow is triggered on a push event to the main branch.
   push:
     branches:
       - main
 
-jobs:                                                    
+jobs:                                                      #The workflow consists of a single job called "build" that runs on the ubuntu-latest runner.
   deploy:
     runs-on: ubuntu-latest
     #environment: production
 
     steps:
-      - name: Checkout                                      
+      - name: Checkout                                        #: This step checks out the source code from the repository.
         uses: actions/checkout@v3
 
       - name: Deploy
-        uses: ./template                                                                                                                      
+        uses: ./template                                       ## path of your template   ### Note: do not mention file name ###                                                                                    
         with:
           version: v1.0.0
           namespace: "stage"
