@@ -1,4 +1,4 @@
-atep:
+step:
   - name: Run Hello Script
     run: |
       #!/bin/bash
