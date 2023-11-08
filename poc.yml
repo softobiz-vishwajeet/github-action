@@ -18,8 +18,8 @@ jobs:                                                      #The workflow consist
         run: |
           pwd
 
-      - name: Deploy
-        uses: "template"                                        # path of the template folder
+      # - name: Deploy
+      #   uses: "template"                                        # path of the template folder
 
 
 
