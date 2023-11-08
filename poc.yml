@@ -14,14 +14,36 @@ jobs:                                                      #The workflow consist
       - name: Checkout Repository                                #: This step checks out the source code from the repository.
         uses: actions/checkout@v2
 
-     - name: Execute Sample Template
+      - name: Execute Sample Command
         run: |
-          curl -sSL https://github.com/yourusername/your-repo/raw/main/sample-template.sh | sh
+          pwd
 
-    - name: Execute Sample Template
-        run: |
-          chmod +x sample-template.sh
-          ./sample-template.sh
+      - name: Deploy
+        uses: "template"                                        # path of the template folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #  - name: Execute Sample Template
+    #     run: |
+    #       curl -sSL https://github.com/yourusername/your-repo/raw/main/sample-template.sh | sh
+
+    # - name: Execute Sample Template
+    #     run: |
+    #       chmod +x sample-template.sh
+    #       ./sample-template.sh
 
       # - name: Set up Node.js                                      #It sets up Node.js 14.
       #   uses: actions/setup-node@v2
