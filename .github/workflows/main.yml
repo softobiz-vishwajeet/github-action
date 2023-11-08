@@ -12,7 +12,7 @@ jobs:                                                      #The workflow consist
 
     steps:
       - name: Checkout Repository                                #: This step checks out the source code from the repository.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Deploy
         uses: ./template/action.yaml
