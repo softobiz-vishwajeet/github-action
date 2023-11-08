@@ -14,10 +14,16 @@ jobs:                                                      #The workflow consist
       - name: Checkout Repository                                #: This step checks out the source code from the repository.
         uses: actions/checkout@v2
 
-      - name: Run Hello Script
-        run: |
-          #!/bin/bash
-          echo "hello"
+      - name: Deploy
+        uses: template/action.yaml
+        with:
+          version: v1.0.0
+          namespace: "stage"
+
+      # - name: Run Hello Script
+      #   run: |
+      #     #!/bin/bash
+      #     echo "hello"
 
       # - name: Execute Sample Command
       #   run: |
