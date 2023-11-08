@@ -1,7 +1,8 @@
-- name: Run Hello Script
-  run: |
-    #!/bin/bash
-    echo "hello"
+atep:
+  - name: Run Hello Script
+    run: |
+      #!/bin/bash
+      echo "hello"
 
 
 
