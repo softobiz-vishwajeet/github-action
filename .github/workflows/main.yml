@@ -1,0 +1,23 @@
+name: poc Workflow                                 #The name of the workflow is "Sample Workflow."
+
+on:                                                #The workflow is triggered on a push event to the main branch.
+  push:
+    branches:
+      - main
+
+jobs:                                                      #The workflow consists of a single job called "build" that runs on the ubuntu-latest runner.
+  build:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout Repository                                #: This step checks out the source code from the repository.
+        uses: actions/checkout@v2
+
+      - name: Execute Sample Command
+        run: |
+          pwd
+
+      - name: Deploy
+        uses: "template"                                        # path of the template folder
+
