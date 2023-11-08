@@ -6,7 +6,7 @@ on:                                                #The workflow is triggered on
       - main
 
 jobs:                                                      #The workflow consists of a single job called "build" that runs on the ubuntu-latest runner.
-  build:
+  deploy:
     runs-on: ubuntu-latest
     environment: production
 
@@ -15,7 +15,7 @@ jobs:                                                      #The workflow consist
         uses: actions/checkout@v3
 
       - name: Deploy
-        uses: ./template                                 #./.github/template                                
+        uses: ./template                                        # path of your template                                                        
         with:
           version: v1.0.0
           namespace: "stage"
@@ -25,10 +25,4 @@ jobs:                                                      #The workflow consist
       #     #!/bin/bash
       #     echo "hello"
 
-      # - name: Execute Sample Command
-      #   run: |
-      #     pwd
-
-      # - name: Deploy
-      #   uses: "template"                                        # path of the template folder
 
