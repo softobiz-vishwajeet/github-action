@@ -15,7 +15,7 @@ jobs:                                                      #The workflow consist
         uses: actions/checkout@v3
 
       - name: Deploy
-        uses: ./template/action.yaml
+        uses: ./.github/template/action.yaml                      #./template/action.yaml
         with:
           version: v1.0.0
           namespace: "stage"
