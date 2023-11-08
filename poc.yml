@@ -8,6 +8,7 @@ on:                                                #The workflow is triggered on
 jobs:                                                      #The workflow consists of a single job called "build" that runs on the ubuntu-latest runner.
   build:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Checkout Repository                                #: This step checks out the source code from the repository.
