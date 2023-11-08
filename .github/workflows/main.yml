@@ -15,7 +15,7 @@ jobs:                                                      #The workflow consist
         uses: actions/checkout@v3
 
       - name: Deploy
-        uses: ./template                                        # path of your template                                                        
+        uses: ./template                                                                                        
         with:
           version: v1.0.0
           namespace: "stage"
