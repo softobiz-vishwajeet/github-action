@@ -20,9 +20,6 @@ jobs:                                                      #The workflow consist
           version: v1.0.0
           namespace: "stage"
 
-      # - name: Run Hello Script
-      #   run: |
-      #     #!/bin/bash
-      #     echo "hello"
+      
 
 
