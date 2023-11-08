@@ -1,3 +1,24 @@
+name: Test
+description: 'composite run action'
+
+runs:
+  using: "composite"
+  steps: 
+    - name: Echo
+      shell: bash
+      run: |
+        echo Heyyyyy
+
+
+
+
+
+
+
+
+
+
+
 # name: Deploy Workflow
 
 # on:
@@ -9,17 +30,17 @@
 #   deploy:
 #     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    # steps:
+    #   - name: Checkout Repository
+    #     uses: actions/checkout@v2
 
-      - name: Deploy
-        run: |
-          #!/bin/bash
-          echo "hello"
-        env:
-          VERSION: v1.0.0
-          NAMESPACE: stage
+    #   - name: Deploy
+    #     run: |
+    #       #!/bin/bash
+    #       echo "hello"
+    #     env:
+    #       VERSION: v1.0.0
+    #       NAMESPACE: stage
 
 
 # step:
