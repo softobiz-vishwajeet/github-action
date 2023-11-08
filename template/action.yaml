@@ -14,43 +14,6 @@ runs:
 
 
 
-
-
-
-
-
-# name: Deploy Workflow
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-
-    # steps:
-    #   - name: Checkout Repository
-    #     uses: actions/checkout@v2
-
-    #   - name: Deploy
-    #     run: |
-    #       #!/bin/bash
-    #       echo "hello"
-    #     env:
-    #       VERSION: v1.0.0
-    #       NAMESPACE: stage
-
-
-# step:
-#   - name: Run Hello Script
-#     run: |
-#       #!/bin/bash
-#       echo "hello"
-
-
-
 # name: 'Deploy Action'
 # description: 'Deploy an application'
 # author: 'Your Name'
@@ -65,3 +28,4 @@ runs:
 #   using: 'composite'
 #   steps:
 #     - run: echo "Deploying version ${{ inputs.version }} to namespace ${{ inputs.namespace }}"
+#       shell: bash
