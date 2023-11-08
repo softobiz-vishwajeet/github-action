@@ -1,32 +1,32 @@
-# name: Test
-# description: 'composite run action'
+name: Test
+description: 'composite run action'
 
-# runs:
-#   using: "composite"
-#   steps: 
-#     - name: Echo
-#       shell: bash
-#       run: |
-#         echo Heyyyyy
-
-
-name: 'Deploy Action'
-description: 'Deploy an application'
-author: 'Your Name'
-
-inputs:
-  version:
-    description: 'Version to deploy'
-    required: true
-  namespace:
-    description: 'Namespace to deploy to'
-    required: true
-    
 runs:
-  using: 'composite'
-  steps:
-    - run: echo "Deploying version ${{ inputs.version }} to namespace ${{ inputs.namespace }}"
+  using: "composite"
+  steps: 
+    - name: Echo
       shell: bash
+      run: |
+        echo Heyyyyy
+
+
+# name: 'Deploy Action'
+# description: 'Deploy an application'
+# author: 'Your Name'
+
+# inputs:
+#   version:
+#     description: 'Version to deploy'
+#     required: true
+#   namespace:
+#     description: 'Namespace to deploy to'
+#     required: true
+    
+# runs:
+#   using: 'composite'
+#   steps:
+#     - run: echo "Deploying version ${{ inputs.version }} to namespace ${{ inputs.namespace }}"
+#       shell: bash
 
 
 
